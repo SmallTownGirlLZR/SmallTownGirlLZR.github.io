@@ -1,0 +1,62 @@
+/* ============================================================ */
+/* Hexo Yun 主题 专属 Banner 美化插件               */
+/* ============================================================ */
+
+/* 1. 引入极客字体: JetBrains Mono (推荐用于 C++/Go 技术博客) */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* 2. Banner 容器全局优化 */
+#banner {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    color: white !important; /* 假设使用暗色背景图 */
+}
+
+/* 3. 【核心美化】主标题: LZR's DevSpace */
+#banner .banner-line,
+#banner .banner-title {
+    /* (A) 强制横向排列 */
+    writing-mode: horizontal-tb !important; 
+    text-orientation: mixed !important;
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+    border: none !important;
+
+    /* (B) 应用极客字体与排版 */
+    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+    font-weight: 700;
+    font-size: 3.2rem; /* 增大字体，更有气场 */
+    letter-spacing: 0.15em; /* 关键：大幅增加字间距，拉开横向视觉张力 */
+    
+    /* (C) 光影层次：极细微阴影，提升高级感，确保文字清晰度 */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4); 
+}
+
+/* 4. 修复标题动画字符 */
+#banner .banner-char {
+    display: inline-block !important;
+    padding: 0 0.01em;
+}
+
+/* 5. 【美化】副标题: "Keep Coding, Keep Thinking." */
+#banner .banner-subtitle {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 1.8rem !important; /* 主副标题之间保持合理的“呼吸间距” */
+    letter-spacing: 0.2em; /* 副标题间距更宽，显得轻盈、高级 */
+    text-transform: uppercase; /* 可选：自动将副标题转为全大写，更有设计感 */
+    opacity: 0.9; /* 稍微降低透明度，区分主次 */
+    text-shadow: 0 1px 5px rgba(0,0,0,0.4);
+}
+
+/* 6. 移除 Yun 主题原本用于竖排对齐的装饰线 */
+#banner .banner-line::before,
+#banner .banner-line::after {
+    display: none !important;
+}

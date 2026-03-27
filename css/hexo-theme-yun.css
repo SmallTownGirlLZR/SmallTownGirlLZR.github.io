@@ -361,7 +361,7 @@ body::before {
   opacity: 0;
 }
 #banner .char-left {
-  border-left: 0 solid var(--banner-line-color);
+  border-left: 1px solid var(--banner-line-color);
   border-right: 0px solid rgba(0,120,231,0.1);
   border-right-width: 0px;
   animation-duration: 0.4s;
@@ -371,7 +371,7 @@ body::before {
 }
 #banner .char-right {
   border-left: 0px solid rgba(0,120,231,0.1);
-  border-right: 0 solid var(--banner-line-color);
+  border-right: 1px solid var(--banner-line-color);
   border-left-width: 0px;
   animation-duration: 0.4s;
   animation-delay: 0.4s;
@@ -468,74 +468,6 @@ body::before {
   }
   100% {
     transform: translate3d(85px, 0, 0);
-  }
-}
-#goDown {
-  display: inline-flex;
-  position: absolute;
-  bottom: 1rem;
-  z-index: 9;
-  animation: float 2s ease-in-out infinite;
-}
-#goDown .icon {
-  color: #0078e7;
-  width: 3rem;
-  height: 3rem;
-}
-@-moz-keyframes float {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-0.8rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes float {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-0.8rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-o-keyframes float {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-0.8rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes float {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateY(-0.8rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 @-moz-keyframes extend-line {
@@ -2072,22 +2004,6 @@ body::before {
 }
 #github-issues {
   margin: 1rem;
-}
-#say {
-  color: var(--hty-text-color);
-  display: block;
-  text-align: center;
-  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
-  font-weight: bold;
-  padding: 0.5rem;
-  border-top: 1px solid var(--hty-secondary-text-color);
-  border-bottom: 1px solid var(--hty-secondary-text-color);
-}
-#say #say-content {
-  display: block;
-}
-#say #say-from {
-  display: block;
 }
 .notice {
   display: flex;
