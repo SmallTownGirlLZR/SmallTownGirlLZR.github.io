@@ -1,62 +1,112 @@
+
+
+
+
+
+
 /* ============================================================ */
-/* Hexo Yun 主题 专属 Banner 美化插件               */
+/* 📝 文章列表 (Post List) 极客风重构 */
 /* ============================================================ */
 
-/* 1. 引入极客字体: JetBrains Mono (推荐用于 C++/Go 技术博客) */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-
-/* 2. Banner 容器全局优化 */
-#banner {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    color: white !important; /* 假设使用暗色背景图 */
+/* 1. 卡片主体：变身锐利的终端节点 */
+.post-card {
+    border-radius: 4px !important; /* 抛弃大圆角，改用硬朗的微倒角 */
+    border: 1px solid rgba(100, 100, 100, 0.3) !important; /* 加上极细的边框线 */
+    box-shadow: none !important; /* 移除默认的软阴影，显得更干净 */
+    background: transparent !important; /* 去除纯色底，融入全局背景 */
+    backdrop-filter: blur(8px); /* 如果有背景图，增加高级的毛玻璃效果 */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
-/* 3. 【核心美化】主标题: LZR's DevSpace */
-#banner .banner-line,
-#banner .banner-title {
-    /* (A) 强制横向排列 */
-    writing-mode: horizontal-tb !important; 
-    text-orientation: mixed !important;
-    display: flex !important; 
-    justify-content: center;
-    align-items: center;
-    margin: 0 !important;
-    border: none !important;
+/* 2. 悬浮特效：IDE 窗口激活时的霓虹发光感 */
+.post-card:hover {
+    transform: translateY(-3px) !important; /* 悬浮时微微弹起 */
+    border-color: #007ACC !important; /* 边框亮起科技蓝 */
+    box-shadow: 0 4px 20px rgba(0, 122, 204, 0.15) !important; /* 散发极其轻微的蓝色辉光 */
+}
 
-    /* (B) 应用极客字体与排版 */
+/* 3. 文章标题：等宽字体，像敲入的命令 */
+.post-card .post-title {
     font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
-    font-weight: 700;
-    font-size: 3.2rem; /* 增大字体，更有气场 */
-    letter-spacing: 0.15em; /* 关键：大幅增加字间距，拉开横向视觉张力 */
-    
-    /* (C) 光影层次：极细微阴影，提升高级感，确保文字清晰度 */
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4); 
+    font-weight: bold;
+    font-size: 1.5rem !important;
+    letter-spacing: 0.05em;
 }
 
-/* 4. 修复标题动画字符 */
-#banner .banner-char {
-    display: inline-block !important;
-    padding: 0 0.01em;
+/* 4. 文章摘要 (Excerpt)：伪装成代码注释 */
+.post-card .post-excerpt {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.95rem;
+    color: #888 !important;
+    border-left: 3px solid #42B983 !important; /* 左侧加上护眼绿的提示条 */
+    padding-left: 15px !important;
+    margin-top: 15px !important;
+    position: relative;
 }
 
-/* 5. 【美化】副标题: "Keep Coding, Keep Thinking." */
-#banner .banner-subtitle {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
-    font-weight: 400;
-    font-size: 1.1rem;
-    margin-top: 1.8rem !important; /* 主副标题之间保持合理的“呼吸间距” */
-    letter-spacing: 0.2em; /* 副标题间距更宽，显得轻盈、高级 */
-    text-transform: uppercase; /* 可选：自动将副标题转为全大写，更有设计感 */
-    opacity: 0.9; /* 稍微降低透明度，区分主次 */
-    text-shadow: 0 1px 5px rgba(0,0,0,0.4);
+/* (可选) 给摘要前面悄悄加个 '//' 注释符，拉满极客细节 */
+.post-card .post-excerpt::before {
+    content: "// ";
+    color: #42B983;
+    font-weight: bold;
 }
 
-/* 6. 移除 Yun 主题原本用于竖排对齐的装饰线 */
-#banner .banner-line::before,
-#banner .banner-line::after {
-    display: none !important;
+
+:root {
+    /* 这里的 0.6 就是透明度。取值 0 到 1，越小越透明 */
+    --board-bg-color: rgba(255, 255, 255, 0.6) !important; 
+}
+
+/* 2. 夜间模式下的透明度 (深色底，契合你的极客黑) */
+html.dark {
+    /* 这里的 0.6 同样是透明度，前三个 30 代表深灰色 */
+    --board-bg-color: rgba(30, 30, 30, 0.6) !important; 
+}
+
+/* 3. 注入高级的“毛玻璃”模糊特效 */
+/* 让后面的背景图片透过来时产生漂亮的虚化，而不是生硬的重叠 */
+.post-card, .sidebar, .post-block {
+    backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important; /* 兼容 Safari */
+    /* 可选：给卡片边缘加一层极细的高光白线，增强物理玻璃的质感 */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; 
+}
+
+
+/* 1. 白天模式：极深灰文字 + 微加粗 + 白色泛光底衬 */
+.post-card, .post-content {
+    color: #111 !important; /* 抛弃默认的灰白，改为极其扎实的深灰 */
+    font-weight: 500 !important; /* 微微加粗字重，让笔画更清晰 */
+    /* 核心魔法：给文字垫一层微弱的白色发光底，彻底隔绝背景图片的干扰 */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9) !important; 
+}
+
+
+
+/* 2. 夜间模式 (Dark Mode) 自动适配：纯白文字 + 黑色深邃阴影 */
+html.dark .post-card, html.dark .post-content {
+    color: #f8f8f8 !important; /* 极浅灰白，防刺眼 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important; /* 黑底阴影，提升深邃感 */
+}
+
+html.dark .post-card h1, html.dark .post-card h2, html.dark .post-card h3 {
+    color: #fff !important;
+}
+
+
+/* 白天模式：纯黑、放大、极粗 */
+.post-card .post-title, 
+.post-card .post-title-link {
+    color: #000000 !important;        /* 强制改为绝对的纯黑 */
+    font-size: 2.2rem !important;     /* 字体大幅度放大 (默认一般是 1.5rem 左右) */
+    font-weight: 900 !important;      /* 极致加粗，让黑色压得住阵脚 */
+    text-shadow: none !important;     /* 剥离多余的光晕阴影，保持极简纯净 */
+    line-height: 1.3 !important;      /* 防止字体放大后多行标题挤在一起 */
+}
+
+/* 🌙 极客防御机制：夜间模式自动反转 */
+/* 警告：如果在夜间模式下标题还是纯黑，就会融进深色背景里完全隐形。所以夜间强制转为纯白 */
+html.dark .post-card .post-title, 
+html.dark .post-card .post-title-link {
+    color: #ffffff !important; 
 }
