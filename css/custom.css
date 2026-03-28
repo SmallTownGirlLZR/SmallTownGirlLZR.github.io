@@ -110,3 +110,17 @@ html.dark .post-card .post-title,
 html.dark .post-card .post-title-link {
     color: #ffffff !important; 
 }
+
+/* ============================================================ */
+/* 🌌 全局背景图亮度压制 */
+/* ============================================================ */
+
+/* 选中 Yun 主题的底层背景图容器 */
+#bg {
+    /* brightness 就是亮度滤镜。1 是一百%原图亮度，0 是纯黑 */
+    /* 建议设置在 0.5 到 0.7 之间，你可以自己微调 */
+    filter: brightness(0.6) !important; 
+    
+    /* 可选：如果你觉得背景图太花哨，还可以顺手加一点点全局模糊，让主体更突出 */
+    /* filter: brightness(0.6) blur(2px) !important; */
+}
