@@ -18,12 +18,7 @@
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
-/* 2. 悬浮特效：IDE 窗口激活时的霓虹发光感 */
-.post-card:hover {
-    transform: translateY(-3px) !important; /* 悬浮时微微弹起 */
-    border-color: #007ACC !important; /* 边框亮起科技蓝 */
-    box-shadow: 0 4px 20px rgba(0, 122, 204, 0.15) !important; /* 散发极其轻微的蓝色辉光 */
-}
+
 
 /* 3. 文章标题：等宽字体，像敲入的命令 */
 .post-card .post-title {
@@ -54,13 +49,13 @@
 
 :root {
     /* 这里的 0.6 就是透明度。取值 0 到 1，越小越透明 */
-    --board-bg-color: rgba(255, 255, 255, 0.6) !important; 
+    --board-bg-color: rgba(13, 27, 42, 0.65) !important; 
 }
 
 /* 2. 夜间模式下的透明度 (深色底，契合你的极客黑) */
 html.dark {
     /* 这里的 0.6 同样是透明度，前三个 30 代表深灰色 */
-    --board-bg-color: rgba(30, 30, 30, 0.6) !important; 
+    --board-bg-color: rgba(10, 35, 20, 0.65) !important; 
 }
 
 /* 3. 注入高级的“毛玻璃”模糊特效 */
@@ -119,8 +114,72 @@ html.dark .post-card .post-title-link {
 #bg {
     /* brightness 就是亮度滤镜。1 是一百%原图亮度，0 是纯黑 */
     /* 建议设置在 0.5 到 0.7 之间，你可以自己微调 */
-    filter: brightness(0.6) !important; 
+    filter: brightness(0.5) !important; 
     
     /* 可选：如果你觉得背景图太花哨，还可以顺手加一点点全局模糊，让主体更突出 */
     /* filter: brightness(0.6) blur(2px) !important; */
+}
+
+
+/* ============================================================ */
+/* 📇 首页文章卡片：彻底分离白天与夜间模式的终极方案 */
+/* ============================================================ */
+
+/* ------------------------------------------------------------ */
+/* ☀️ 白天模式 (Light Mode)：纯净白底毛玻璃 + 扎实深灰字 */
+/* ------------------------------------------------------------ */
+.post-card {
+    background-color: rgba(240, 248, 255, 0.85) !important; /* AliceBlue 的半透明版 */
+    backdrop-filter: blur(3px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important; /* 极淡的暗色边框 */
+}
+
+/* 白天模式普通文字 */
+.post-card .post-excerpt,
+.post-card .post-excerpt p,
+.post-card .post-excerpt li {
+    color: #333333 !important; /* 扎实的深灰/纯黑 */
+    /*text-shadow: none !important;  彻底清除诡异的发光阴影 */
+    font-weight: 500 !important;
+}
+
+/* 白天模式引用块 */
+.post-card blockquote {
+    color: #444444 !important;
+    background-color: rgba(240, 248, 255, 0.85) !important; /* AliceBlue 的半透明版 */
+    border-left: 4px solid #0078d7 !important; /* 微软蓝点缀 */
+}
+
+/* 白天模式底部元数据 (日期、标签) */
+.post-card .post-meta,
+.post-card .post-meta a {
+    color: #666666 !important; 
+}
+
+
+/* ------------------------------------------------------------ */
+/* 🌙 夜间模式 (Dark Mode)：深灰蓝底毛玻璃 + 高亮白字 */
+/* 注意：这里所有的选择器前面都加了 html.dark 严密隔离！ */
+/* ------------------------------------------------------------ */
+html.dark .post-card {
+    background-color: rgba(25, 30, 40, 0.85) !important; /* 深灰蓝底 */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* 微弱的白光边框 */
+}
+
+html.dark .post-card .post-excerpt,
+html.dark .post-card .post-excerpt p,
+html.dark .post-card .post-excerpt li {
+    color: #f0f4f8 !important; /* 护眼亮白 */
+    text-shadow: none !important; 
+}
+
+html.dark .post-card blockquote {
+    color: #e2e8f0 !important; 
+    background-color: rgba(255, 255, 255, 0.05) !important; 
+    border-left: 4px solid #64b5f6 !important; 
+}
+
+html.dark .post-card .post-meta,
+html.dark .post-card .post-meta a {
+    color: #a0aec0 !important; 
 }
