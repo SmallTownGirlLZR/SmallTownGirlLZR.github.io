@@ -1,39 +1,327 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#007ACC"><meta name="author" content="LinZR"><meta name="copyright" content="LinZR"><meta name="generator" content="Hexo 8.1.1"><meta name="theme" content="hexo-theme-yun"><title>LinZhenRongのHEXO</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/star-markdown-css@0.4.1/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="https://fastly.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
-  [".post-card",".markdown-body img"].forEach((target)=> {
-    ScrollReveal().reveal(target);
-  })
-}
-document.addEventListener("DOMContentLoaded", initScrollReveal);
-document.addEventListener("pjax:success", initScrollReveal);
-</script><script src="https://fastly.jsdelivr.net/npm/pjax@latest/pjax.min.js" defer></script><script src="/js/pjax.js" defer type="module"></script><script src="https://fastly.jsdelivr.net/npm/vue@2.6.14"></script><link rel="icon" type="image/png" href="/favicon.ico"><link rel="mask-icon" href="/favicon.ico" color="#007ACC"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://fastly.jsdelivr.net/npm/" crossorigin><script id="yun-config">
-    window.Yun = {}
-    window.CONFIG = {"hostname":"smalltowngirllzr.github.io","root":"/","title":"见微知著","version":"1.10.11","mode":"auto","copycode":true,"page":{"isPost":false},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.yunyoujun.cn/img/avatar/none.jpg","fireworks":{"colors":null},"vendors":{"host":"https://fastly.jsdelivr.net/npm/","darken":"https://fastly.jsdelivr.net/npm/darken@1.5.0"}};
-  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="stylesheet" href="/css/custom.css"><meta name="description" content="Stay hungry, stay foolish.">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LinZhenRongのHEXO - Every moment is a fresh beginning.</title><meta name="author" content="LinZR"><meta name="copyright" content="LinZR"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Stay hungry, stay foolish.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LinZhenRongのHEXO">
 <meta property="og:url" content="https://smalltowngirllzr.github.io/index.html">
 <meta property="og:site_name" content="LinZhenRongのHEXO">
 <meta property="og:description" content="Stay hungry, stay foolish.">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://smalltowngirllzr.github.io/images/avatar.jpg">
 <meta property="article:author" content="LinZR">
-<meta name="twitter:card" content="summary"><script>(function() {
-  if (CONFIG.mode !== 'auto') return
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  const setting = localStorage.getItem('darken-mode') || 'auto'
-  if (setting === 'dark' || (prefersDark && setting !== 'light'))
-    document.documentElement.classList.toggle('dark', true)
-})()</script></head><body class="is-home"><script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script><script>// Define global variable
-IconifyProviders = {
-  // Empty prefix: overwrite default API provider configuration
-  '': {
-    // Use custom API first, use Iconify public API as backup
-    resources: [
-        'https://api.iconify.design',
-    ],
-    // Wait for 1 second before switching API hosts
-    rotate: 1000,
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://smalltowngirllzr.github.io/images/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "LinZhenRongのHEXO",
+  "alternateName": [
+    "Every moment is a fresh beginning.",
+    "smalltowngirllzr.github.io"
+  ],
+  "url": "https://smalltowngirllzr.github.io/"
+}</script><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://smalltowngirllzr.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
   },
-};</script><script defer src="https://fastly.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><div class="sidebar-panel sidebar-panel-active" id="site-overview-wrap"><div class="site-info"><a class="site-author-avatar" href="/about/" title="LinZR"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="LinZR"><span class="site-author-status" title="Hello World">😊</span></a><div class="site-author-name"><a href="/about/">LinZR</a></div><span class="site-name">LinZhenRongのHEXO</span><sub class="site-subtitle">Every moment is a fresh beginning.</sub><div class="site-description">Stay hungry, stay foolish.</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:home-4-line"></span></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:archive-line"></span></span><span class="site-state-item-count">3</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:folder-2-line"></span></span><span class="site-state-item-count">1</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="site-state-item-count">5</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><span class="icon iconify" data-icon="ri:settings-line"></span></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/SmallTownGirlLZR" title="GitHub" target="_blank" style="color:#181717"><span class="icon iconify" data-icon="ri:github-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678355866&amp;site=qq&amp;menu=yes" title="QQ" target="_blank" style="color:#12B7F5"><span class="icon iconify" data-icon="ri:qq-line"></span></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="/images/wechat.jpg" title="WeChat" target="_blank" style="color:#1AAD19"><span class="icon iconify" data-icon="ri:wechat-2-line"></span></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><span class="icon iconify" data-icon="ri:genderless-line"></span></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><span class="icon iconify" data-icon="ri:contrast-2-line"></span></a></div></aside><main class="sidebar-translate" id="content"><div id="banner"><div class="banner-line vertical-line-top"></div><div class="banner-char-container"></div><div class="banner-line vertical-line-bottom"></div><div class="cloud"><svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="rgba(255, 255, 255, 0.6)"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0" opacity="0.7"></use><use xlink:href="#gentle-wave" x="48" y="3" opacity="0.5"></use><use xlink:href="#gentle-wave" x="48" y="5" opacity="0.3"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><a id="goDown" aria-label="go-down" href="javascript:window.scrollTo(0, banner.clientHeight);"><span class="icon iconify" data-icon="ri:arrow-down-double-line"></span></a></div><script src="/js/ui/banner.js" type="module"></script><div class="notice"><span>Status: 200 OK. 欢迎随便逛逛。</span></div><section class="flex flex-col" id="recent-posts"><article class="post-card w-full" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://SmallTownGirlLZR.github.io/2025/12/02/%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="LinZR"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="LinZhenRongのHEXO"></span><div class="post-card-header"><header class="post-header"><h2 class="post-title" itemprop="name headline"><a class="post-title-link" itemprop="url" href="/2025/12/02/%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F/">条件变量</a></h2><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2025-12-02 16:33:03" itemprop="dateCreated datePublished" datetime="2025-12-02T16:33:03+08:00">2025-12-02</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2026-03-29 14:07:17" itemprop="dateModified" datetime="2026-03-29T14:07:17+08:00">2026-03-29</time></div></div></header></div><div class="post-card-content text-center"><div class="post-card-excerpt markdown-body"></div></div><div class="hty-card__actions post-card__actions"><div class="post-card-category"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:folder-line"></span></span></div><div class="post-card-tag"><a class="tag-item" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">操作系统</span></a><a class="tag-item" href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">并发编程</span></a></div></div></article><article class="post-card w-full" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://SmallTownGirlLZR.github.io/2025/10/10/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88%E6%B3%95/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="LinZR"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="LinZhenRongのHEXO"></span><div class="post-card-header"><header class="post-header"><h2 class="post-title" itemprop="name headline"><a class="post-title-link" itemprop="url" href="/2025/10/10/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88%E6%B3%95/">二分答案法</a></h2><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2025-10-10 20:57:31" itemprop="dateCreated datePublished" datetime="2025-10-10T20:57:31+08:00">2025-10-10</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2026-03-29 00:39:53" itemprop="dateModified" datetime="2026-03-29T00:39:53+08:00">2026-03-29</time></div></div></header></div><div class="post-card-content text-center"><div class="post-card-excerpt markdown-body"></div></div><div class="hty-card__actions post-card__actions"><div class="post-card-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E7%AE%97%E6%B3%95/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">算法</span></a></span></div><div class="post-card-tag"><a class="tag-item" href="/tags/%E7%AE%97%E6%B3%95/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">算法</span></a><a class="tag-item" href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">二分查找</span></a></div></div></article><article class="post-card w-full" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://SmallTownGirlLZR.github.io/2025/09/28/%E5%8D%95%E8%B0%83%E6%A0%88/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="LinZR"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="LinZhenRongのHEXO"></span><div class="post-card-header"><header class="post-header"><h2 class="post-title" itemprop="name headline"><a class="post-title-link" itemprop="url" href="/2025/09/28/%E5%8D%95%E8%B0%83%E6%A0%88/">单调栈</a></h2><div class="post-meta"><div class="post-time"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-line"></span></span> <time title="创建时间：2025-09-28 10:22:13" itemprop="dateCreated datePublished" datetime="2025-09-28T10:22:13+08:00">2025-09-28</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:calendar-2-line"></span></span> <time title="修改时间：2026-03-29 00:40:01" itemprop="dateModified" datetime="2026-03-29T00:40:01+08:00">2026-03-29</time></div></div></header></div><div class="post-card-content text-center"><div class="post-card-excerpt markdown-body"></div></div><div class="hty-card__actions post-card__actions"><div class="post-card-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><span class="icon iconify" data-icon="ri:folder-line"></span></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E7%AE%97%E6%B3%95/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">算法</span></a></span></div><div class="post-card-tag"><a class="tag-item" href="/tags/%E7%AE%97%E6%B3%95/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">算法</span></a><a class="tag-item" href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><span class="icon iconify" data-icon="ri:price-tag-3-line"></span></span><span class="tag-name">单调栈</span></a></div></div></article></section></main><footer id="footer" style="margin-top: 50px; padding: 30px 0; background: transparent;"><div class="footer-container" style="display: flex; flex-direction: column; align-items: center; font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.9rem;"><!-- 终端命令行视觉--><div class="terminal-prompt" style="margin-bottom: 10px; color: #ccc;"><span style="color: #007ACC; font-weight: bold;">root@lzr</span><span style="color: white;">:</span><span style="color: #42B983; font-weight: bold;">/var/www/blog</span><span style="color: white;">$ </span><span class="typing-text" style="color: #aaa;">echo "Keep Coding, Keep Thinking."</span></div><!-- 版权信息与极简图标--><div class="copyright" style="color: #888; margin-top: 8px;"><span>&copy; 2026</span><span class="with-love" style="margin: 0 8px; color: #007ACC;"><i class="ri-terminal-window-line"></i></span><span>Lin Zhen Rong</span></div><!-- 运行状态标识--><div class="status" style="margin-top: 5px; font-size: 0.8rem; color: #666;"><span>Server Status: </span><span style="color: #42B983;">[ OK ]</span></div></div></footer></div><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><span class="icon iconify" data-icon="ri:arrow-up-s-line"></span><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#007ACC" stroke-width="2" stroke-linecap="round"></circle></svg></a><script src="https://fastly.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script><script>const images = [...document.querySelectorAll('.markdown-body img')]
-mediumZoom(images)</script><style>.medium-zoom-image {
-  z-index: 99;
-}</style></body></html>
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LinZhenRongのHEXO',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      if ($loadingBox.classList.contains('loaded')) return
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+
+  if (document.readyState === 'complete') {
+    preloader.endLoading()
+  } else {
+    window.addEventListener('load', preloader.endLoading)
+    document.addEventListener('DOMContentLoaded', preloader.endLoading)
+    // Add timeout protection: force end after 7 seconds
+    setTimeout(preloader.endLoading, 7000)
+  }
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div class="bg-animation" id="web_bg" style="background-image: url(/images/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn"><i class="fa-fw fas fa-book"></i><span> 文档</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/images/background.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">LinZhenRongのHEXO</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn"><i class="fa-fw fas fa-book"></i><span> 文档</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">LinZhenRongのHEXO</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/SmallTownGirlLZR" target="_blank" title="Github"><i class="fab fa-github" style="color: #181717;"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678355866&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #12B7F5;"></i></a><a class="social-icon" href="/images/wechat.jpg" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #1AAD19;"></i></a><a class="social-icon" href="mailto:Rylynnlzr@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #007ACC;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/02/%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F/" title="条件变量">条件变量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-02T08:33:03.000Z" title="发表于 2025-12-02 16:33:03">2025-12-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></span></div><div class="content">条件变量条件变量的定义及概念 条件变量是利用线程间共享的变量（公共资源）进行同步的一种机制，是在多线程程序中用来实现等待–&gt;唤醒逻辑常用的方法，线程可以使用条件变量来等待某个条件为真，注意理解并不是等待条件变量为真。 当条件不满足时，线程将自己放入等待队列，同时释放自己拥有的互斥锁    条件变量（Condition Variable）的一般用法是：线程 A 等待某个条件并挂起，直到线程 B 设置了这个条件，并通知条件变量，然后线程 A 被唤醒。经典的「生产者-消费者」问题就可以用条件变量来解决。  条件变量主要优势可以避免忙等待：忙等待示例： 123456789101112131415// ❌ 忙等待：浪费CPU资源while (true) &#123;    std::unique_lock&lt;std::mutex&gt; lock(queue_mutex);    if (!tasks.empty()) &#123;        // 取出任务执行        auto task = std::move(tasks.front());        tasks...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/10/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88%E6%B3%95/" title="二分答案法">二分答案法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-10T12:57:31.000Z" title="发表于 2025-10-10 20:57:31">2025-10-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">二分答案法步骤 估计最终答案可能的范围是什么 分析问题的答案和给定条件之间的单调性 （从条件直接退出答案很困难，所以给定一个答案反推条件，看看反推出的条件是否满足题设） 建立函数f()当答案固定时，判断给定的条件是否达标，f()是一个具有单调性的函数 在可能的答案上不断二分搜索，每次都利用f()函数判断，直到二分查找结束  核心:  分析单调性 建立f()函数  题目1 爱吃香蕉的珂珂875. 爱吃香蕉的珂珂 珂珂喜欢吃香蕉。这里有 n 堆香蕉，第 i 堆中有 piles[i] 根香蕉。警卫已经离开了，将在 h 小时后回来。 珂珂可以决定她吃香蕉的速度 k （单位：根&#x2F;小时）。每个小时，她将会选择一堆香蕉，从中吃掉 k 根。如果这堆香蕉少于 k 根，她将吃掉这堆的所有香蕉，然后这一小时内不会再吃更多的香蕉。  珂珂喜欢慢慢吃，但仍然想在警卫回来前吃掉所有的香蕉。 返回她可以在 h 小时内吃掉所有香蕉的最小速度 k（k 为整数）。 示例 1： 12输入：piles = [3,6,7,11], h = 8输出：4  示例 2： 12输入：piles = [30,11,23,...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/09/28/%E5%8D%95%E8%B0%83%E6%A0%88/" title="单调栈">单调栈</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-28T02:22:13.000Z" title="发表于 2025-09-28 10:22:13">2025-09-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">单调栈单调栈的经典问题 0）当前位置的 左侧比当前位置的数字小，且距离最近的位置 在哪  1）当前位置的 右侧比当前位置的数字小，且距离最近的位置 在哪 或者：  0）当前位置的 左侧比当前位置的数字大，且距离最近的位置 在哪  1）当前位置的 右侧比当前位置的数字大，且距离最近的位置 在哪   单调栈操作的时间复杂度为O(n) case 1:数组中没有重复元素  将数组的元素依次入栈，并且栈中的元素满足：越靠近栈顶的元素越大 如果当前元素比栈顶元素更大，则当前元素入栈。 如果当前元素(cur)比栈顶元素小，则栈顶元素(top)出栈。此时可以更新结果：top右侧比当前位置的数字小，且距离最近的位置即为cur，而左侧比当前位置的数字小，且距离最近的位置即为栈中在top之下的元素  如图：cur为3，则7的右侧答案为3，左侧答案为6。6的右侧答案3，左侧答案为5。5的右侧答案为3，左侧答案为2。 代码： 1234567891011121314151617181920212223vector&lt;vector&lt;int&gt;&gt; f(vector&lt;int&gt; ar...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LinZR</div><div class="author-info-description">Stay hungry, stay foolish.</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/SmallTownGirlLZR"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/SmallTownGirlLZR" target="_blank" title="Github"><i class="fab fa-github" style="color: #181717;"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678355866&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #12B7F5;"></i></a><a class="social-icon" href="/images/wechat.jpg" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #1AAD19;"></i></a><a class="social-icon" href="mailto:Rylynnlzr@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #007ACC;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Status: 200 OK. 欢迎随便逛逛。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/02/%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F/" title="条件变量">条件变量</a><time datetime="2025-12-02T08:33:03.000Z" title="发表于 2025-12-02 16:33:03">2025-12-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/10/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88%E6%B3%95/" title="二分答案法">二分答案法</a><time datetime="2025-10-10T12:57:31.000Z" title="发表于 2025-10-10 20:57:31">2025-10-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/28/%E5%8D%95%E8%B0%83%E6%A0%88/" title="单调栈">单调栈</a><time datetime="2025-09-28T02:22:13.000Z" title="发表于 2025-09-28 10:22:13">2025-09-28</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="card-category-list-name">操作系统</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">算法</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%95%E8%B0%83%E6%A0%88/" style="font-size: 1.1em; color: #999">单调栈</a> <a href="/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">并发编程</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" style="font-size: 1.1em; color: #999">二分查找</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">操作系统</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.5em; color: #99a9bf">算法</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              十月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              九月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">9.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-03-30T09:49:31.510Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By LinZR</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@3.0.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["Code. Think. Create."].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["Code. Think. Create."])
+}
+typedJSFn.run(subtitleType)</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
